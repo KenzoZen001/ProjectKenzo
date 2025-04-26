@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northern Chefs - Homemade Food Products</title>
+  <meta name="description" content="A taste of home in every jar. Enjoy authentic homemade food products.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header id="main-header">
+    <nav>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="products.html">Product</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="logo">
+        <img src="public/images/Logo2.png" alt="Northern Chefs Logo" />
+      </div>
+      <div class="user-actions">
+        <a href="login.html">Log-in</a>
+        <a href="index.html">Sign-up</a>
+        <a href="cart.html" class="cart-link">
+          <svg class="icon cart-icon" height="24" width="24" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M56.262,17.837H26.748c-0.961,0-1.508,0.743-1.223,1.661l4.669,13.677c0.23,0.738,1.044,1.336,1.817,1.336h19.35   c0.773,0,1.586-0.598,1.815-1.336l4.069-14C57.476,18.437,57.036,17.837,56.262,17.837z"/>
+            <circle cx="29.417" cy="50.267" r="4.415"/>
+            <circle cx="48.099" cy="50.323" r="4.415"/>
+            <path d="M53.4,39.004H27.579L17.242,9.261H9.193c-1.381,0-2.5,1.119-2.5,2.5s1.119,2.5,2.5,2.5h4.493l10.337,29.743H53.4   c1.381,0,2.5-1.119,2.5-2.5S54.781,39.004,53.4,39.004z"/>
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="account.html" class="user-link">
+          <svg class="icon user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.667 0-8 1.333-8 4v2h16v-2c0-2.667-5.333-4-8-4z" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <div class="close-menu">&times;</div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Product</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="mobile-user-actions">
+          <a href="login.html">Log-in</a>
+          <a href="signup.html">Sign-up</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-image">
+      <div class="hero-content">
+        <img src="public/images/Logo1.png" alt="Chef Gabriel's Logo" class="float-animation">
+        <h1>A Taste of Home<br>in every Jar.</h1>
+        <a href="products.html" class="cta-button">PRODUCT</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <div class="welcome-container">
+      <h2>Welcome!</h2>
+      <p>Enjoy the rich, authentic flavors of Chef Gabriel's—convenient, delicious, and made with love.</p>
+      <p><span class="accent-text">Just open, serve, and savor!</span></p>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="product-section">
+    <div class="section-header">
+      <h2>Try some of this!</h2>
+      <div class="arrow-container">
+        <img src="public/images/arrow.png" class="arrow">
+      </div>
+    </div>
+    <div class="product-grid">
+      <div class="product-card" data-product-id="laing-1">
+        <h3 class="product-title">Laing</h3>
+        <div class="product-image-container">
+          <img src="public/images/laing.png" alt="Laing" class="product-image">
+        </div>
+        <h4 class="product-name">Laing</h4>
+        <p class="price">₱149.00</p>
+        <button class="buy-button" data-id="laing-1" data-name="Laing" data-price="149.00" data-image="images/laing.png">BUY</button>
+      </div>
+      <div class="product-card" data-product-id="bangus-1">
+        <h3 class="product-title">Spanish Bangus</h3>
+        <div class="product-image-container">
+          <img src="public/images/bangusspanish.png" alt="Spanish Bangus" class="product-image">
+        </div>
+        <h4 class="product-name">Spanish Bangus</h4>
+        <p class="price">₱189.00</p>
+        <button class="buy-button" data-id="bangus-1" data-name="Spanish Bangus" data-price="189.00" data-image="images/bangusspanish.png">BUY</button>
+      </div>
+      <div class="product-card" data-product-id="chili-1">
+        <h3 class="product-title">Chili Garlic</h3>
+        <div class="product-image-container">
+          <img src="public/images/chiligarlic.png" alt="Chili Garlic" class="product-image">
+        </div>
+        <h4 class="product-name">Chili Garlic</h4>
+        <p class="price">₱159.00</p>
+        <button class="buy-button" data-id="chili-1" data-name="Chili Garlic" data-price="159.00" data-image="images/chiligarlic.png">BUY</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Products Section -->
+  <section class="all-products-section">
+    <h2 class="section-title">PRODUCT</h2>
+    
+    <!-- Product Filters -->
+    <div class="product-filters">
+      <button class="filter-button active" data-category="all">All Products</button>
+      <button class="filter-button" data-category="chicken-pastel">Chicken Pastel</button>
+      <button class="filter-button" data-category="laing">Laing</button>
+      <button class="filter-button" data-category="bangus">Spanish Bangus</button>
+      <button class="filter-button" data-category="chili">Chili Garlic</button>
+    </div>
+    
+    <div class="products-container">
+      <!-- Product 1 -->
+      <div class="product-item" data-category="bangus">
+        <div class="product-content">
+          <div class="product-image">
+            <img src="public/images/bangusspanish.png" alt="Spanish Bangus">
+            <span class="product-badge best-seller">Best Seller</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-name">Spanish Bangus</h3>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-count">(24 reviews)</span>
+            </div>
+            <p class="product-description">Premium milkfish marinated in Spanish-style sauce, perfect for any occasion.</p>
+            <div class="price">₱189.00</div>
+            <div class="product-actions">
+              <button class="add-to-cart-btn" data-id="bangus-2" data-name="Spanish Bangus" data-price="189.00" data-image="images/bangusspanish.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-item" data-category="laing">
+        <div class="product-content">
+          <div class="product-image">
+            <img src="images/laing.png" alt="Laing">
+            <span class="product-badge popular">Popular</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-name">Laing</h3>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-count">(18 reviews)</span>
+            </div>
+            <p class="product-description">Traditional Bicolano dish made with taro leaves in coconut milk.</p>
+            <div class="price">₱149.00</div>
+            <div class="product-actions">
+              <button class="add-to-cart-btn" data-id="laing-2" data-name="Laing" data-price="149.00" data-image="images/laing.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-item" data-category="chili">
+        <div class="product-content">
+          <div class="product-image">
+            <img src="images/chiligarlic.png" alt="Chili Garlic">
+            <span class="product-badge spicy">Spicy</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-name">Chili Garlic</h3>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-count">(15 reviews)</span>
+            </div>
+            <p class="product-description">Homemade chili garlic sauce, perfect for adding heat to any dish.</p>
+            <div class="price">₱159.00</div>
+            <div class="product-actions">
+              <button class="add-to-cart-btn" data-id="chili-2" data-name="Chili Garlic" data-price="159.00" data-image="images/chiligarlic.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-item" data-category="chicken-pastel">
+        <div class="product-content">
+          <div class="product-image">
+            <img src="images/chickenpastilclassic.png" alt="Chicken Pastil Classic">
+            <span class="product-badge classic">Classic</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-name">Chicken Pastil Classic</h3>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <span class="rating-count">(21 reviews)</span>
+            </div>
+            <p class="product-description">Our classic chicken pastil recipe, a timeless favorite.</p>
+            <div class="price">₱149.00</div>
+            <div class="product-actions">
+              <button class="add-to-cart-btn" data-id="chicken-classic" data-name="Chicken Pastil Classic" data-price="149.00" data-image="images/chickenpastilclassic.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-item" data-category="chicken-pastel">
+        <div class="product-content">
+          <div class="product-image">
+            <img src="images/chickenpastilsaltedegg.png" alt="Chicken Pastil Salted Egg">
+            <span class="product-badge new">New</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-name">Chicken Pastil Salted Egg</h3>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-count">(12 reviews)</span>
+            </div>
+            <p class="product-description">A unique fusion of chicken pastil with rich salted egg flavor.</p>
+            <div class="price">₱149.00</div>
+            <div class="product-actions">
+              <button class="add-to-cart-btn" data-id="chicken-salted" data-name="Chicken Pastil Salted Egg" data-price="149.00" data-image="images/chickenpastilsaltedegg.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-item" data-category="chicken-pastel">
+        <div class="product-content">
+          <div class="product-image">
+            <img src="images/chickenpastiloriginal.png" alt="Chicken Pastil Original">
+            <span class="product-badge best-value">Best Value</span>
+          </div>
+          <div class="product-details">
+            <h3 class="product-name">Chicken Pastil Original</h3>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-count">(30 reviews)</span>
+            </div>
+            <p class="product-description">The original chicken pastil that started it all. A must-try!</p>
+            <div class="price">₱149.00</div>
+            <div class="product-actions">
+              <button class="add-to-cart-btn" data-id="chicken-original" data-name="Chicken Pastil Original" data-price="149.00" data-image="images/chickenpastiloriginal.png">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coming Soon Items -->
+      <div class="product-item coming-soon-item">
+        <div class="product-content coming-soon">
+          <div class="question-mark">?</div>
+          <div class="coming-soon-glow"></div>
+          <img src="images/comingsoon.png" alt="Coming Soon">
+        </div>
+      </div>
+      
+      <div class="product-item coming-soon-item">
+        <div class="product-content coming-soon">
+          <div class="question-mark">?</div>
+          <div class="coming-soon-glow"></div>
+          <img src="images/comingsoon.png" alt="Coming Soon">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Coming Soon Banner -->
+    <div class="coming-soon-container">
+      <div class="coming-soon-overlay"></div>
+      <div class="coming-soon-banner">
+        <h2 class="metallic-text">COMING SOON</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section">
+    <div class="section-header">
+      <h2>Reviews</h2>
+    </div>
+    
+    <div class="reviews-container">
+      <!-- Review Form -->
+      <div class="review-form-container">
+        <h3>Add Your Review</h3>
+        <form id="review-form" class="review-form">
+          <div class="form-group">
+            <label for="review-username">Name</label>
+            <input type="text" id="review-username" name="username" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="review-rating">Rating</label>
+            <div class="rating-input">
+              <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="review-title">Title</label>
+            <input type="text" id="review-title" name="title" placeholder="Review Title" required>
+          </div>
+          <div class="form-group">
+            <label for="review-content">Review</label>
+            <textarea id="review-content" name="content" placeholder="Write your review..." required></textarea>
+          </div>
+          <button type="submit" class="submit-review">Submit Review</button>
+        </form>
+      </div>
+      
+      <!-- Reviews Display -->
+      <div class="reviews-list" id="reviews-list">
+        <!-- Reviews will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <ul class="social-icons">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="contact-info">
+          <li><i class="fas fa-phone"></i> 0-123-4567-8900</li>
+          <li><i class="fas fa-map-marker-alt"></i> BLK Try Lot Try South, Caloocan, Set Location</li>
+          <li><i class="fas fa-envelope"></i> SampleEmail.com</li>
+        </ul>
+      </div>
+      <div class="footer-middle">
+        <form class="feedback-form">
+          <label for="feedback">Write your Experience!</label>
+          <input type="text" id="feedback" placeholder="Write your feedback...">
+          <label for="rating">Rate your Experience!</label>
+          <div class="rating-stars">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          </div>
+          <button type="submit" class="feedback-submit">Submit Feedback</button>
+        </form>
+      </div>
+      <div class="footer-center">
+        <img src="images/Logo1.png" alt="Logo" class="footer-logo">
+        <img src="images/Logo2.png" alt="Logo" class="footer-logo">
+      </div>
+      <div class="footer-right">
+        <div class="footer-links-container">
+          <div class="footer-links-column">
+            <h3>Navigate</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Product</a></li>
+              <li><a href="order.html">Order</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-column">
+            <h3>Product</h3>
+            <ul class="footer-links">
+              <li><a href="products.html#chicken-original">Chicken Pastil Original</a></li>
+              <li><a href="products.html#chicken-classic">Chicken Pastil Classic</a></li>
+              <li><a href="products.html#chicken-salted">Chicken Pastil Salted Egg</a></li>
+              <li><a href="products.html#chili">Chili Garlic</a></li>
+              <li><a href="products.html#bangus">Spanish Bangus</a></li>
+              <li><a href="products.html#laing">Laing</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © <span id="current-year"></span> Northern Chefs. All Rights Reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Back to Top">↑</button>
+
+  <!-- Cart Notification -->
+  <div id="cart-notification" class="cart-notification">
+    <div class="cart-notification-content">
+      <i class="fas fa-check-circle"></i>
+      <p>Item added to cart!</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/navigation.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/product-filters.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

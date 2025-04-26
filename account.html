@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern Chefs - My Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header id="main-header">
+        <nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html" class="dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="product.html#chicken">Chicken Pastil</a>
+                        <a href="product.html#laing">Laing</a>
+                        <a href="product.html#bangus">Spanish Bangus</a>
+                        <a href="product.html#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/Logo2.png" alt="North3rn Chefs Logo" />
+            </div>
+            <div class="user-actions">
+                <a href="login.html">Log-in</a>
+                <a href="index.html">Sign-up</a>
+                <a href="Cart.html" class="cart-link">
+                    <svg class="icon cart-icon" height="24" width="24" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M56.262,17.837H26.748c-0.961,0-1.508,0.743-1.223,1.661l4.669,13.677c0.23,0.738,1.044,1.336,1.817,1.336h19.35   c0.773,0,1.586-0.598,1.815-1.336l4.069-14C57.476,18.437,57.036,17.837,56.262,17.837z"/>
+                        <circle cx="29.417" cy="50.267" r="4.415"/>
+                        <circle cx="48.099" cy="50.323" r="4.415"/>
+                        <path d="M53.4,39.004H27.579L17.242,9.261H9.193c-1.381,0-2.5,1.119-2.5,2.5s1.119,2.5,2.5,2.5h4.493l10.337,29.743H53.4   c1.381,0,2.5-1.119,2.5-2.5S54.781,39.004,53.4,39.004z"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="account.html" class="user-link active">
+                    <svg class="icon user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.667 0-8 1.333-8 4v2h16v-2c0-2.667-5.333-4-8-4z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="close-menu">&times;</div>
+            <ul class="mobile-nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="product.html#chicken">Chicken Pastil</a>
+                        <a href="product.html#laing">Laing</a>
+                        <a href="product.html#bangus">Spanish Bangus</a>
+                        <a href="product.html#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-user-actions">
+                    <a href="login.html">Log-in</a>
+                    <a href="index.html">Sign-up</a>
+                    <a href="account.html" class="active">My Account</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Account Dashboard -->
+    <section class="account-dashboard">
+        <div class="container">
+            <div class="dashboard-container">
+                <!-- Sidebar -->
+                <div class="dashboard-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="images/user-avatar.png" alt="User Avatar">
+                            <div class="edit-avatar">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <h3 class="user-name">John Doe</h3>
+                        <p class="user-email">johndoe@example.com</p>
+                    </div>
+                    
+                    <ul class="dashboard-menu">
+                        <li class="active" data-tab="dashboard">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </li>
+                        <li data-tab="orders">
+                            <i class="fas fa-shopping-bag"></i> My Orders
+                        </li>
+                        <li data-tab="addresses">
+                            <i class="fas fa-map-marker-alt"></i> Addresses
+                        </li>
+                        <li data-tab="wishlist">
+                            <i class="fas fa-heart"></i> Wishlist
+                        </li>
+                        <li data-tab="reviews">
+                            <i class="fas fa-star"></i> Reviews
+                        </li>
+                        <li data-tab="settings">
+                            <i class="fas fa-cog"></i> Account Settings
+                        </li>
+                        <li class="logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Dashboard Content -->
+                <div class="dashboard-content">
+                    <!-- Dashboard Overview Tab -->
+                    <div class="dashboard-tab active" id="dashboard-tab">
+                        <h2>Dashboard</h2>
+                        <p>Welcome back, John! Here's an overview of your account.</p>
+                        
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>5</h3>
+                                    <p>Total Orders</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>2</h3>
+                                    <p>In Progress</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>8</h3>
+                                    <p>Wishlist Items</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>3</h3>
+                                    <p>Reviews</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-orders">
+                            <div class="section-header">
+                                <h3>Recent Orders</h3>
+                                <a href="#" class="view-all" data-tab="orders">View All</a>
+                            </div>
+                            <div class="order-table-container">
+                                <table class="order-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Total</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#NC123456</td>
+                                            <td>May 15, 2023</td>
+                                            <td><span class="status delivered">Delivered</span></td>
+                                            <td>₱1,250.00</td>
+                                            <td><a href="#" class="view-order-btn">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#NC123455</td>
+                                            <td>May 10, 2023</td>
+                                            <td><span class="status processing">Processing</span></td>
+                                            <td>₱850.00</td>
+                                            <td><a href="#" class="view-order-btn">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#NC123454</td>
+                                            <td>May 5, 2023</td>
+                                            <td><span class="status delivered">Delivered</span></td>
+                                            <td>₱950.00</td>
+                                            <td><a href="#" class="view-order-btn">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="account-actions">
+                            <a href="#" class="action-card" data-tab="orders">
+                                <i class="fas fa-shopping-bag"></i>
+                                <h4>My Orders</h4>
+                                <p>View and track your orders</p>
+                            </a>
+                            <a href="#" class="action-card" data-tab="addresses">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h4>Addresses</h4>
+                                <p>Manage your addresses</p>
+                            </a>
+                            <a href="#" class="action-card" data-tab="settings">
+                                <i class="fas fa-user-edit"></i>
+                                <h4>Edit Profile</h4>
+                                <p>Update your personal information</p>
+                            </a>
+                            <a href="#" class="action-card" data-tab="wishlist">
+                                <i class="fas fa-heart"></i>
+                                <h4>Wishlist</h4>
+                                <p>View your saved items</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Orders Tab -->
+                    <div class="dashboard-tab" id="orders-tab">
+                        <h2>My Orders</h2>
+                        <p>View and track all your orders.</p>
+                        
+                        <div class="order-filters">
+                            <div class="search-filter">
+                                <input type="text" id="order-search" placeholder="Search orders...">
+                                <button id="search-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="status-filter">
+                                <select id="status-filter">
+                                    <option value="all">All Orders</option>
+                                    <option value="processing">Processing</option>
+                                    <option value="shipped">Shipped</option>
+                                    <option value="delivered">Delivered</option>
+                                    <option value="cancelled">Cancelled</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="order-table-container">
+                            <table class="order-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Total</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#NC123456</td>
+                                        <td>May 15, 2023</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                        <td>₱1,250.00</td>
+                                        <td><a href="#" class="view-order-btn">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#NC123455</td>
+                                        <td>May 10, 2023</td>
+                                        <td><span class="status processing">Processing</span></td>
+                                        <td>₱850.00</td>
+                                        <td><a href="#" class="view-order-btn">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#NC123454</td>
+                                        <td>May 5, 2023</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                        <td>₱950.00</td>
+                                        <td><a href="#" class="view-order-btn">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#NC123453</td>
+                                        <td>April 28, 2023</td>
+                                        <td><span class="status shipped">Shipped</span></td>
+                                        <td>₱750.00</td>
+                                        <td><a href="#" class="view-order-btn">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#NC123452</td>
+                                        <td>April 20, 2023</td>
+                                        <td><span class="status delivered">Delivered</span></td>
+                                        <td>₱1,050.00</td>
+                                        <td><a href="#" class="view-order-btn">View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="pagination">
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Addresses Tab -->
+                    <div class="dashboard-tab" id="addresses-tab">
+                        <h2>My Addresses</h2>
+                        <p>Manage your delivery addresses.</p>
+                        
+                        <div class="address-actions">
+                            <button id="add-address-btn" class="add-address-btn">
+                                <i class="fas fa-plus"></i> Add New Address
+                            </button>
+                        </div>
+                        
+                        <div class="addresses-container">
+                            <div class="address-card">
+                                <div class="address-badge">Default</div>
+                                <h3>Home</h3>
+                                <p>John Doe</p>
+                                <p>123 Main Street, Apartment 4B</p>
+                                <p>Caloocan City, Metro Manila, 1400</p>
+                                <p>Philippines</p>
+                                <p>Phone: 0912-345-6789</p>
+                                <div class="address-actions">
+                                    <button class="edit-address-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="delete-address-btn"><i class="fas fa-trash"></i> Delete</button>
+                                </div>
+                            </div>
+                            
+                            <div class="address-card">
+                                <h3>Office</h3>
+                                <p>John Doe</p>
+                                <p>456 Business Avenue, Suite 10</p>
+                                <p>Makati City, Metro Manila, 1200</p>
+                                <p>Philippines</p>
+                                <p>Phone: 0912-345-6789</p>
+                                <div class="address-actions">
+                                    <button class="edit-address-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="delete-address-btn"><i class="fas fa-trash"></i> Delete</button>
+                                    <button class="set-default-btn"><i class="fas fa-check-circle"></i> Set as Default</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wishlist Tab -->
+                    <div class="dashboard-tab" id="wishlist-tab">
+                        <h2>My Wishlist</h2>
+                        <p>Your saved items for future purchase.</p>
+                        
+                        <div class="wishlist-container">
+                            <div class="wishlist-item">
+                                <div class="wishlist-image">
+                                    <img src="images/chickenpastiloriginal.png" alt="Chicken Pastil Original">
+                                </div>
+                                <div class="wishlist-details">
+                                    <h3>Chicken Pastil Original</h3>
+                                    <p class="wishlist-price">₱149.00</p>
+                                    <div class="wishlist-actions">
+                                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                        <button class="remove-wishlist-btn"><i class="fas fa-trash"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="wishlist-item">
+                                <div class="wishlist-image">
+                                    <img src="images/laing.png" alt="Laing Original">
+                                </div>
+                                <div class="wishlist-details">
+                                    <h3>Laing Original</h3>
+                                    <p class="wishlist-price">₱149.00</p>
+                                    <div class="wishlist-actions">
+                                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                        <button class="remove-wishlist-btn"><i class="fas fa-trash"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="wishlist-item">
+                                <div class="wishlist-image">
+                                    <img src="images/bangusspanish.png" alt="Spanish Bangus Original">
+                                </div>
+                                <div class="wishlist-details">
+                                    <h3>Spanish Bangus Original</h3>
+                                    <p class="wishlist-price">₱189.00</p>
+                                    <div class="wishlist-actions">
+                                        <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                        <button class="remove-wishlist-btn"><i class="fas fa-trash"></i> Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews Tab -->
+                    <div class="dashboard-tab" id="reviews-tab">
+                        <h2>My Reviews</h2>
+                        <p>Reviews you've left for products.</p>
+                        
+                        <div class="reviews-container">
+                            <div class="review-item">
+                                <div class="review-product">
+                                    <img src="images/chickenpastiloriginal.png" alt="Chicken Pastil Original">
+                                    <h3>Chicken Pastil Original</h3>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="review-date">May 16, 2023</p>
+                                    <p class="review-text">Absolutely delicious! The chicken pastil was perfectly seasoned and the texture was amazing. Will definitely order again!</p>
+                                    <div class="review-actions">
+                                        <button class="edit-review-btn"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="delete-review-btn"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-product">
+                                    <img src="images/laing.png" alt="Laing Original">
+                                    <h3>Laing Original</h3>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="review-date">May 10, 2023</p>
+                                    <p class="review-text">Great flavor and authentic taste. The laing was creamy and had just the right amount of spice. Would recommend!</p>
+                                    <div class="review-actions">
+                                        <button class="edit-review-btn"><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="delete-review-btn"><i class="fas fa-trash"></i> Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Settings Tab -->
+                    <div class="dashboard-tab" id="settings-tab">
+                        <h2>Account Settings</h2>
+                        <p>Manage your account information and preferences.</p>
+                        
+                        <div class="settings-container">
+                            <div class="settings-section">
+                                <h3>Personal Information</h3>
+                                <form class="settings-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="first-name">First Name</label>
+                                            <input type="text" id="first-name" name="first-name" value="John">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Last Name</label>
+                                            <input type="text" id="last-name" name="last-name" value="Doe">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" name="email" value="johndoe@example.com">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" value="0912-345-6789">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="birthdate">Date of Birth</label>
+                                        <input type="date" id="birthdate" name="birthdate" value="1990-01-15">
+                                    </div>
+                                    
+                                    <button type="submit" class="save-btn">Save Changes</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h3>Change Password</h3>
+                                <form class="settings-form">
+                                    <div class="form-group">
+                                        <label for="current-password">Current Password</label>
+                                        <input type="password" id="current-password" name="current-password">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="new-password">New Password</label>
+                                        <input type="password" id="new-password" name="new-password">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="confirm-password">Confirm New Password</label>
+                                        <input type="password" id="confirm-password" name="confirm-password">
+                                    </div>
+                                    
+                                    <button type="submit" class="save-btn">Change Password</button>
+                                </form>
+                            </div>
+                            
+                            <div class="settings-section">
+                                <h3>Notification Preferences</h3>
+                                <form class="settings-form">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="order-updates" name="order-updates" checked>
+                                        <label for="order-updates">Order updates and shipping notifications</label>
+                                    </div>
+                                    
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="promotions" name="promotions" checked>
+                                        <label for="promotions">Promotions, discounts, and special offers</label>
+                                    </div>
+                                    
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                        <label for="newsletter">Newsletter and product updates</label>
+                                    </div>
+                                    
+                                    <button type="submit" class="save-btn">Save Preferences</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Modal -->
+    <div id="address-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="address-modal-title">Add New Address</h2>
+            
+            <form id="address-form" class="address-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="address-name">Address Name</label>
+                        <input type="text" id="address-name" name="address-name" placeholder="e.g. Home, Office" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name">Recipient Name</label>
+                        <input type="text" id="recipient-name" name="recipient-name" placeholder="Full Name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="street-address">Street Address</label>
+                    <input type="text" id="street-address" name="street-address" placeholder="House number and street name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apartment">Apartment, Suite, Unit, etc. (optional)</label>
+                    <input type="text" id="apartment" name="apartment" placeholder="Apartment, suite, unit, etc.">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="province">Province</label>
+                        <input type="text" id="province" name="province" placeholder="Province" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="postal-code">Postal Code</label>
+                        <input type="text" id="postal-code" name="postal-code" placeholder="Postal Code" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="Philippines">Philippines</option>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required>
+                </div>
+                
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="default-address" name="default-address">
+                        <label for="default-address">Set as default address</label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="save-address-btn">Save Address</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div id="order-details-modal" class="modal">
+        <div class="modal-content order-details-content">
+            <span class="close-modal">&times;</span>
+            <h2>Order Details</h2>
+            
+            <div class="order-info">
+                <div class="order-info-item">
+                    <span>Order ID:</span>
+                    <span>#NC123456</span>
+                </div>
+                <div class="order-info-item">
+                    <span>Date:</span>
+                    <span>May 15, 2023</span>
+                </div>
+                <div class="order-info-item">
+                    <span>Status:</span>
+                    <span class="status delivered">Delivered</span>
+                </div>
+                <div class="order-info-item">
+                    <span>Payment Method:</span>
+                    <span>Credit Card</span>
+                </div>
+            </div>
+            
+            <div class="order-items">
+                <h3>Items</h3>
+                <div class="order-item">
+                    <div class="order-item-image">
+                        <img src="images/chickenpastiloriginal.png" alt="Chicken Pastil Original">
+                    </div>
+                    <div class="order-item-details">
+                        <h4>Chicken Pastil Original</h4>
+                        <p class="order-item-price">₱149.00 x 3</p>
+                    </div>
+                    <div class="order-item-total">
+                        ₱447.00
+                    </div>
+                </div>
+                <div class="order-item">
+                    <div class="order-item-image">
+                        <img src="images/laing.png" alt="Laing Original">
+                    </div>
+                    <div class="order-item-details">
+                        <h4>Laing Original</h4>
+                        <p class="order-item-price">₱149.00 x 2</p>
+                    </div>
+                    <div class="order-item-total">
+                        ₱298.00
+                    </div>
+                </div>
+                <div class="order-item">
+                    <div class="order-item-image">
+                        <img src="images/bangusspanish.png" alt="Spanish Bangus Original">
+                    </div>
+                    <div class="order-item-details">
+                        <h4>Spanish Bangus Original</h4>
+                        <p class="order-item-price">₱189.00 x 2</p>
+                    </div>
+                    <div class="order-item-total">
+                        ₱378.00
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>₱1,123.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span>₱127.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span>₱1,250.00</span>
+                </div>
+            </div>
+            
+            <div class="order-address">
+                <h3>Shipping Address</h3>
+                <p>John Doe</p>
+                <p>123 Main Street, Apartment 4B</p>
+                <p>Caloocan City, Metro Manila, 1400</p>
+                <p>Philippines</p>
+                <p>Phone: 0912-345-6789</p>
+            </div>
+            
+            <div class="order-actions">
+                <button class="reorder-btn">Reorder</button>
+                <button class="track-order-btn">Track Order</button>
+                <button class="download-invoice-btn">Download Invoice</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul class="social-icons">
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> 0-123-4567-8900</li>
+                    <li><i class="fas fa-map-marker-alt"></i> BLK Try Lot Try South, Caloocan</li>
+                    <li><i class="fas fa-envelope"></i> info@northernchefs.com</li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <img src="images/Logo1.png" alt="Northern Chefs Logo" class="footer-logo">
+                <p>&copy; 2025 Northern Chefs. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>

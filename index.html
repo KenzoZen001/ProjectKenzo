@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern Chefs - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header id="main-header">
+        <nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#" class="dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#chicken">Chicken Pastil</a>
+                        <a href="#laing">Laing</a>
+                        <a href="#bangus">Spanish Bangus</a>
+                        <a href="#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/Logo2.png" alt="North3rn Chefs Logo" />
+            </div>
+            <div class="user-actions">
+                <a href="login.html">Log-in</a>
+                <a href="index.html" class="active">Sign-up</a>
+                <a href="Cart.html" class="cart-link">
+                    <svg class="icon cart-icon" height="24" width="24" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M56.262,17.837H26.748c-0.961,0-1.508,0.743-1.223,1.661l4.669,13.677c0.23,0.738,1.044,1.336,1.817,1.336h19.35   c0.773,0,1.586-0.598,1.815-1.336l4.069-14C57.476,18.437,57.036,17.837,56.262,17.837z"/>
+                        <circle cx="29.417" cy="50.267" r="4.415"/>
+                        <circle cx="48.099" cy="50.323" r="4.415"/>
+                        <path d="M53.4,39.004H27.579L17.242,9.261H9.193c-1.381,0-2.5,1.119-2.5,2.5s1.119,2.5,2.5,2.5h4.493l10.337,29.743H53.4   c1.381,0,2.5-1.119,2.5-2.5S54.781,39.004,53.4,39.004z"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#" class="user-link">
+                    <svg class="icon user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.667 0-8 1.333-8 4v2h16v-2c0-2.667-5.333-4-8-4z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="close-menu">&times;</div>
+            <ul class="mobile-nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="#chicken">Chicken Pastil</a>
+                        <a href="#laing">Laing</a>
+                        <a href="#bangus">Spanish Bangus</a>
+                        <a href="#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="mobile-user-actions">
+                    <a href="login.html">Log-in</a>
+                    <a href="index.html" class="active">Sign-up</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Create Account</h2>
+                <p>Join our community and enjoy delicious homemade products</p>
+            </div>
+            <form id="registration-form" action="register.php" method="post">
+                <!-- Add CSRF token -->
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                
+                <div class="progress-bar-container">
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Personal Info</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Account Setup</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Preferences</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 33.33%"></div>
+                    </div>
+                </div>
+                
+                <div class="form-step active" data-step="1">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <div class="input-container">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="firstName" name="first_name" placeholder="Enter your first name" required>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <div class="input-container">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="lastName" name="last_name" placeholder="Enter your last name" required>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-container">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobileNo">Mobile Number</label>
+                        <div class="input-container">
+                            <i class="fas fa-phone input-icon"></i>
+                            <input type="tel" id="mobileNo" name="mobile_no" placeholder="Enter your mobile number" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="next-btn">Next Step</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" data-step="2">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-container password-container">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="password" name="password" placeholder="Create a password" required>
+                            <i class="fas fa-eye toggle-password" id="togglePassword" data-for="password"></i>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-meter">
+                                <div class="strength-bar"></div>
+                            </div>
+                            <span class="strength-text">Password strength</span>
+                        </div>
+                        <div class="password-requirements">
+                            <p>Password must contain:</p>
+                            <ul>
+                                <li class="requirement" id="length-req"><i class="fas fa-times-circle"></i> At least 8 characters</li>
+                                <li class="requirement" id="uppercase-req"><i class="fas fa-times-circle"></i> At least 1 uppercase letter</li>
+                                <li class="requirement" id="lowercase-req"><i class="fas fa-times-circle"></i> At least 1 lowercase letter</li>
+                                <li class="requirement" id="number-req"><i class="fas fa-times-circle"></i> At least 1 number</li>
+                                <li class="requirement" id="special-req"><i class="fas fa-times-circle"></i> At least 1 special character</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="input-container password-container">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="confirmPassword" name="confirm_password" placeholder="Confirm your password" required>
+                            <i class="fas fa-eye toggle-password" id="toggleConfirmPassword" data-for="confirmPassword"></i>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next Step</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" data-step="3">
+                    <div class="form-group">
+                        <label>Favorite Products (Optional)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="chicken-pastil" name="favorites[]" value="chicken-pastil">
+                                <label for="chicken-pastil">Chicken Pastil</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="laing" name="favorites[]" value="laing">
+                                <label for="laing">Laing</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="spanish-bangus" name="favorites[]" value="spanish-bangus">
+                                <label for="spanish-bangus">Spanish Bangus</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="chili-garlic" name="favorites[]" value="chili-garlic">
+                                <label for="chili-garlic">Chili Garlic</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How did you hear about us? (Optional)</label>
+                        <div class="input-container">
+                            <i class="fas fa-info-circle input-icon"></i>
+                            <select id="referral" name="referral">
+                                <option value="">Select an option</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="friend">Friend or Family</option>
+                                <option value="search">Search Engine</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="terms">
+                        <input type="checkbox" id="termsCheckbox" name="terms_accepted" required>
+                        <label for="termsCheckbox" class="checkbox-custom"></label>
+                        <label for="termsCheckbox">I accept the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.</label>
+                        <div class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="submit" id="register-btn">Create Account</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="social-signup">
+                <p>Or sign up with</p>
+                <div class="social-buttons">
+                    <button type="button" class="social-btn google-btn">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="social-btn facebook-btn">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </button>
+                </div>
+            </div>
+
+            <p class="login-link">
+                Already have an account? <a href="login.html">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul class="social-icons">
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> 0-123-4567-8900</li>
+                    <li><i class="fas fa-map-marker-alt"></i> BLK Try Lot Try South, Caloocan</li>
+                    <li><i class="fas fa-envelope"></i> info@northernchefs.com</li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <img src="images/Logo1.png" alt="Northern Chefs Logo" class="footer-logo">
+                <p>&copy; 2025 Northern Chefs. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

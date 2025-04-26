@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern Chefs - Order</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header id="main-header">
+        <nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html" class="dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="product.html#chicken">Chicken Pastil</a>
+                        <a href="product.html#laing">Laing</a>
+                        <a href="product.html#bangus">Spanish Bangus</a>
+                        <a href="product.html#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/Logo2.png" alt="North3rn Chefs Logo" />
+            </div>
+            <div class="user-actions">
+                <a href="login.html">Log-in</a>
+                <a href="index.html">Sign-up</a>
+                <a href="Cart.html" class="cart-link">
+                    <svg class="icon cart-icon" height="24" width="24" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M56.262,17.837H26.748c-0.961,0-1.508,0.743-1.223,1.661l4.669,13.677c0.23,0.738,1.044,1.336,1.817,1.336h19.35   c0.773,0,1.586-0.598,1.815-1.336l4.069-14C57.476,18.437,57.036,17.837,56.262,17.837z"/>
+                        <circle cx="29.417" cy="50.267" r="4.415"/>
+                        <circle cx="48.099" cy="50.323" r="4.415"/>
+                        <path d="M53.4,39.004H27.579L17.242,9.261H9.193c-1.381,0-2.5,1.119-2.5,2.5s1.119,2.5,2.5,2.5h4.493l10.337,29.743H53.4   c1.381,0,2.5-1.119,2.5-2.5S54.781,39.004,53.4,39.004z"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="account.html" class="user-link">
+                    <svg class="icon user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.667 0-8 1.333-8 4v2h16v-2c0-2.667-5.333-4-8-4z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="close-menu">&times;</div>
+            <ul class="mobile-nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="product.html#chicken">Chicken Pastil</a>
+                        <a href="product.html#laing">Laing</a>
+                        <a href="product.html#bangus">Spanish Bangus</a>
+                        <a href="product.html#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="order.html" class="active">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-user-actions">
+                    <a href="login.html">Log-in</a>
+                    <a href="index.html">Sign-up</a>
+                    <a href="account.html">My Account</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="order-hero">
+        <div class="order-hero-content">
+            <h1>Place Your Order</h1>
+            <p>Order our delicious homemade products for delivery or pickup</p>
+        </div>
+    </section>
+
+    <!-- Order Process -->
+    <section class="order-process">
+        <div class="container">
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Add to Cart</h3>
+                    <p>Select your favorite products and add them to your cart</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Checkout</h3>
+                    <p>Provide your delivery details and payment information</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p>We'll deliver your order fresh to your doorstep</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Enjoy</h3>
+                    <p>Enjoy our delicious homemade products with your family</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-form-section">
+        <div class="container">
+            <div class="order-container">
+                <div class="order-form-container">
+                    <h2>Order Details</h2>
+                    <div class="order-tabs">
+                        <button class="tab-btn active" data-tab="delivery">Delivery</button>
+                        <button class="tab-btn" data-tab="pickup">Pickup</button>
+                    </div>
+                    
+                    <form id="order-form" class="order-form">
+                        <div class="tab-content" id="delivery-tab">
+                            <div class="form-group">
+                                <label for="delivery-address">Delivery Address</label>
+                                <input type="text" id="delivery-address" name="delivery-address" placeholder="Enter your full address" required>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city" placeholder="City" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code</label>
+                                    <input type="text" id="zip" name="zip" placeholder="ZIP Code" required>
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="delivery-instructions">Delivery Instructions (Optional)</label>
+                                <textarea id="delivery-instructions" name="delivery-instructions" placeholder="Any special instructions for delivery"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Delivery Time</label>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" id="asap" name="delivery-time" value="asap" checked>
+                                        <label for="asap">As soon as possible</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="scheduled" name="delivery-time" value="scheduled">
+                                        <label for="scheduled">Schedule for later</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group scheduled-time" style="display: none;">
+                                <label for="delivery-date">Delivery Date & Time</label>
+                                <div class="form-row">
+                                    <input type="date" id="delivery-date" name="delivery-date" min="">
+                                    <select id="delivery-time-slot" name="delivery-time-slot">
+                                        <option value="">Select time</option>
+                                        <option value="10:00-12:00">10:00 AM - 12:00 PM</option>
+                                        <option value="12:00-14:00">12:00 PM - 2:00 PM</option>
+                                        <option value="14:00-16:00">2:00 PM - 4:00 PM</option>
+                                        <option value="16:00-18:00">4:00 PM - 6:00 PM</option>
+                                    </select>
+                                </div>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="pickup-tab" style="display: none;">
+                            <div class="form-group">
+                                <label for="pickup-location">Pickup Location</label>
+                                <select id="pickup-location" name="pickup-location" required>
+                                    <option value="">Select a location</option>
+                                    <option value="main-store">Main Store - BLK Try Lot Try South, Caloocan</option>
+                                    <option value="branch-1">Branch 1 - SM North EDSA</option>
+                                    <option value="branch-2">Branch 2 - Trinoma Mall</option>
+                                </select>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Pickup Time</label>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" id="pickup-asap" name="pickup-time" value="asap" checked>
+                                        <label for="pickup-asap">As soon as possible</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="pickup-scheduled" name="pickup-time" value="scheduled">
+                                        <label for="pickup-scheduled">Schedule for later</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group pickup-scheduled-time" style="display: none;">
+                                <label for="pickup-date">Pickup Date & Time</label>
+                                <div class="form-row">
+                                    <input type="date" id="pickup-date" name="pickup-date" min="">
+                                    <select id="pickup-time-slot" name="pickup-time-slot">
+                                        <option value="">Select time</option>
+                                        <option value="10:00-12:00">10:00 AM - 12:00 PM</option>
+                                        <option value="12:00-14:00">12:00 PM - 2:00 PM</option>
+                                        <option value="14:00-16:00">2:00 PM - 4:00 PM</option>
+                                        <option value="16:00-18:00">4:00 PM - 6:00 PM</option>
+                                    </select>
+                                </div>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-name">Contact Information</label>
+                            <input type="text" id="contact-name" name="contact-name" placeholder="Full Name" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="contact-email" name="contact-email" placeholder="Email Address" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="contact-phone" name="contact-phone" placeholder="Phone Number" required>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method</label>
+                            <select id="payment-method" name="payment-method" required>
+                                <option value="">Select payment method</option>
+                                <option value="cash">Cash on Delivery</option>
+                                <option value="gcash">GCash</option>
+                                <option value="credit-card">Credit/Debit Card</option>
+                                <option value="bank-transfer">Bank Transfer</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group payment-details" id="credit-card-details" style="display: none;">
+                            <label>Credit Card Details</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="Card Number" maxlength="19">
+                            <div class="form-row">
+                                <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" maxlength="5">
+                                <input type="text" id="card-cvv" name="card-cvv" placeholder="CVV" maxlength="3">
+                            </div>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group payment-details" id="gcash-details" style="display: none;">
+                            <label>GCash Number</label>
+                            <input type="tel" id="gcash-number" name="gcash-number" placeholder="GCash Number">
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group payment-details" id="bank-details" style="display: none;">
+                            <label>Bank Transfer Details</label>
+                            <p class="payment-info">Please transfer the total amount to:</p>
+                            <p class="payment-info">Bank: BDO</p>
+                            <p class="payment-info">Account Name: Northern Chefs</p>
+                            <p class="payment-info">Account Number: 1234 5678 9012</p>
+                            <p class="payment-info">Please upload your proof of payment after completing your order.</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="order-notes">Order Notes (Optional)</label>
+                            <textarea id="order-notes" name="order-notes" placeholder="Any special requests or notes for your order"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-order-btn">Place Order</button>
+                    </form>
+                </div>
+                
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                        <div class="empty-cart-message">Your cart is empty. Add some products to place an order.</div>
+                    </div>
+                    
+                    <div class="promo-code">
+                        <input type="text" id="promo-code" placeholder="Promo Code">
+                        <button id="apply-promo">Apply</button>
+                    </div>
+                    
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₱0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Delivery Fee</span>
+                            <span id="delivery-fee">₱0.00</span>
+                        </div>
+                        <div class="total-row discount-row" style="display: none;">
+                            <span>Discount</span>
+                            <span id="discount">-₱0.00</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total</span>
+                            <span id="total">₱0.00</span>
+                        </div>
+                    </div>
+                    
+                    <button id="update-cart-btn" class="update-cart-btn">Update Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Success Modal -->
+    <div id="order-success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your order. Your order number is <span id="order-number"></span>.</p>
+                <p>We've sent a confirmation email to <span id="confirmation-email"></span>.</p>
+                <div class="order-details">
+                    <h3>Order Details</h3>
+                    <div class="detail-row">
+                        <span>Order Date:</span>
+                        <span id="order-date"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Delivery/Pickup:</span>
+                        <span id="order-type"></span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Total Amount:</span>
+                        <span id="order-total"></span>
+                    </div>
+                </div>
+                <div class="success-buttons">
+                    <a href="product.html" class="continue-shopping-btn">Continue Shopping</a>
+                    <a href="account.html" class="view-order-btn">View Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul class="social-icons">
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> 0-123-4567-8900</li>
+                    <li><i class="fas fa-map-marker-alt"></i> BLK Try Lot Try South, Caloocan</li>
+                    <li><i class="fas fa-envelope"></i> info@northernchefs.com</li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <img src="images/Logo1.png" alt="Northern Chefs Logo" class="footer-logo">
+                <p>&copy; 2025 Northern Chefs. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/order.js"></script>
+</body>
+</html>

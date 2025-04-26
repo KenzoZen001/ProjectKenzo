@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern Chefs - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header id="main-header">
+        <nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#" class="dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#chicken">Chicken Pastil</a>
+                        <a href="#laing">Laing</a>
+                        <a href="#bangus">Spanish Bangus</a>
+                        <a href="#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="public/images/Logo2.png" alt="North3rn Chefs Logo" />
+            </div>
+            <div class="user-actions">
+                <a href="login.html" class="active">Log-in</a>
+                <a href="index.html">Sign-up</a>
+                <a href="Cart.html" class="cart-link">
+                    <svg class="icon cart-icon" height="24" width="24" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M56.262,17.837H26.748c-0.961,0-1.508,0.743-1.223,1.661l4.669,13.677c0.23,0.738,1.044,1.336,1.817,1.336h19.35   c0.773,0,1.586-0.598,1.815-1.336l4.069-14C57.476,18.437,57.036,17.837,56.262,17.837z"/>
+                        <circle cx="29.417" cy="50.267" r="4.415"/>
+                        <circle cx="48.099" cy="50.323" r="4.415"/>
+                        <path d="M53.4,39.004H27.579L17.242,9.261H9.193c-1.381,0-2.5,1.119-2.5,2.5s1.119,2.5,2.5,2.5h4.493l10.337,29.743H53.4   c1.381,0,2.5-1.119,2.5-2.5S54.781,39.004,53.4,39.004z"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#" class="user-link">
+                    <svg class="icon user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.667 0-8 1.333-8 4v2h16v-2c0-2.667-5.333-4-8-4z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="close-menu">&times;</div>
+            <ul class="mobile-nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="#chicken">Chicken Pastil</a>
+                        <a href="#laing">Laing</a>
+                        <a href="#bangus">Spanish Bangus</a>
+                        <a href="#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="mobile-user-actions">
+                    <a href="login.html" class="active">Log-in</a>
+                    <a href="index.html">Sign-up</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="login-container">
+            <div class="login-left">
+                <div class="overlay-text">
+                    <img src="images/Logo1.png" alt="Chef Gabriel's Logo">
+                    <h2>A Taste of Home <br> in every Jar.</h2>
+                </div>
+            </div>
+            <div class="login-right">
+                <div class="form-header">
+                    <h2>Welcome Back</h2>
+                    <p>Please enter your credentials to login</p>
+                </div>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-container">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-container password-container">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <i class="fas fa-eye toggle-password" id="togglePassword" data-for="password"></i>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe" class="checkbox-custom"></label>
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="login-button">Login</button>
+                    
+                    <div class="social-login">
+                        <p>Or continue with</p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google-btn">
+                                <i class="fab fa-google"></i>
+                                <span>Google</span>
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="register-link">
+                    Don't have an account yet? <a href="index.html">Register here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul class="social-icons">
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> 0-123-4567-8900</li>
+                    <li><i class="fas fa-map-marker-alt"></i> BLK Try Lot Try South, Caloocan</li>
+                    <li><i class="fas fa-envelope"></i> info@northernchefs.com</li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <img src="public/images/Logo2.png" alt="Northern Chefs Logo" class="footer-logo">
+                <p>&copy; 2025 Northern Chefs. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

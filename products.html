@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern Chefs - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header id="main-header">
+        <nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="product.html" class="active dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#chicken">Chicken Pastil</a>
+                        <a href="#laing">Laing</a>
+                        <a href="#bangus">Spanish Bangus</a>
+                        <a href="#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/Logo2.png" alt="North3rn Chefs Logo" />
+            </div>
+            <div class="user-actions">
+                <a href="login.html">Log-in</a>
+                <a href="index.html">Sign-up</a>
+                <a href="Cart.html" class="cart-link">
+                    <svg class="icon cart-icon" height="24" width="24" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M56.262,17.837H26.748c-0.961,0-1.508,0.743-1.223,1.661l4.669,13.677c0.23,0.738,1.044,1.336,1.817,1.336h19.35   c0.773,0,1.586-0.598,1.815-1.336l4.069-14C57.476,18.437,57.036,17.837,56.262,17.837z"/>
+                        <circle cx="29.417" cy="50.267" r="4.415"/>
+                        <circle cx="48.099" cy="50.323" r="4.415"/>
+                        <path d="M53.4,39.004H27.579L17.242,9.261H9.193c-1.381,0-2.5,1.119-2.5,2.5s1.119,2.5,2.5,2.5h4.493l10.337,29.743H53.4   c1.381,0,2.5-1.119,2.5-2.5S54.781,39.004,53.4,39.004z"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="account.html" class="user-link">
+                    <svg class="icon user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.667 0-8 1.333-8 4v2h16v-2c0-2.667-5.333-4-8-4z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="close-menu">&times;</div>
+            <ul class="mobile-nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger active">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="#chicken">Chicken Pastil</a>
+                        <a href="#laing">Laing</a>
+                        <a href="#bangus">Spanish Bangus</a>
+                        <a href="#chili">Chili Garlic</a>
+                    </div>
+                </li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-user-actions">
+                    <a href="login.html">Log-in</a>
+                    <a href="index.html">Sign-up</a>
+                    <a href="account.html">My Account</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="product-hero">
+        <div class="product-hero-content">
+            <h1>Our Products</h1>
+            <p>Discover our delicious homemade products made with love and tradition</p>
+        </div>
+    </section>
+
+    <!-- Product Filters -->
+    <section class="product-filters-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="search-filter">
+                    <input type="text" id="product-search" placeholder="Search products...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="all">All Products</button>
+                    <button class="filter-btn" data-category="chicken">Chicken Pastil</button>
+                    <button class="filter-btn" data-category="laing">Laing</button>
+                    <button class="filter-btn" data-category="bangus">Spanish Bangus</button>
+                    <button class="filter-btn" data-category="chili">Chili Garlic</button>
+                </div>
+                <div class="sort-filter">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="default">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="product-grid-section">
+        <div class="container">
+            <div id="product-count" class="product-count">Showing 12 products</div>
+            <div class="product-grid" id="product-grid">
+                <!-- Chicken Pastil Products -->
+                <div class="product-card" data-category="chicken" data-price="149" data-name="Chicken Pastil Original">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image">
+                        <img src="images/chickenpastiloriginal.png" alt="Chicken Pastil Original">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="chicken-original">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="chicken-original">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chicken Pastil Original</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(30)</span>
+                        </div>
+                        <p class="product-price">₱149.00</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="chicken" data-price="149" data-name="Chicken Pastil Classic">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="images/chickenpastilclassic.png" alt="Chicken Pastil Classic">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="chicken-classic">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="chicken-classic">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chicken Pastil Classic</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(21)</span>
+                        </div>
+                        <p class="product-price">₱149.00</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="chicken" data-price="149" data-name="Chicken Pastil Salted Egg">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="images/chickenpastilsaltedegg.png" alt="Chicken Pastil Salted Egg">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="chicken-salted">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="chicken-salted">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chicken Pastil Salted Egg</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(12)</span>
+                        </div>
+                        <p class="product-price">₱149.00</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="chicken" data-price="159" data-name="Chicken Pastil Spicy">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-image">
+                        <img src="images/chickenpastiloriginal.png" alt="Chicken Pastil Spicy">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="chicken-spicy">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="chicken-spicy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chicken Pastil Spicy</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(18)</span>
+                        </div>
+                        <p class="product-price">₱159.00</p>
+                    </div>
+                </div>
+
+                <!-- Laing Products -->
+                <div class="product-card" data-category="laing" data-price="149" data-name="Laing Original">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="images/laing.png" alt="Laing Original">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="laing-original">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="laing-original">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Laing Original</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(24)</span>
+                        </div>
+                        <p class="product-price">₱149.00</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="laing" data-price="159" data-name="Laing Spicy">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-image">
+                        <img src="images/laing.png" alt="Laing Spicy">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="laing-spicy">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="laing-spicy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Laing Spicy</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(16)</span>
+                        </div>
+                        <p class="product-price">₱159.00</p>
+                    </div>
+                </div>
+
+                <!-- Spanish Bangus Products -->
+                <div class="product-card" data-category="bangus" data-price="189" data-name="Spanish Bangus Original">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image">
+                        <img src="images/bangusspanish.png" alt="Spanish Bangus Original">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="bangus-original">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="bangus-original">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Spanish Bangus Original</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(28)</span>
+                        </div>
+                        <p class="product-price">₱189.00</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bangus" data-price="199" data-name="Spanish Bangus Spicy">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-image">
+                        <img src="images/bangusspanish.png" alt="Spanish Bangus Spicy">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="bangus-spicy">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="bangus-spicy">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Spanish Bangus Spicy</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(14)</span>
+                        </div>
+                        <p class="product-price">₱199.00</p>
+                    </div>
+                </div>
+
+                <!-- Chili Garlic Products -->
+                <div class="product-card" data-category="chili" data-price="159" data-name="Chili Garlic Original">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image">
+                        <img src="images/chiligarlic.png" alt="Chili Garlic Original">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="chili-original">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="chili-original">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chili Garlic Original</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(20)</span>
+                        </div>
+                        <p class="product-price">₱159.00</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="chili" data-price="169" data-name="Chili Garlic Extra Hot">
+                    <div class="product-badge">Extra Hot</div>
+                    <div class="product-image">
+                        <img src="images/chiligarlic.png" alt="Chili Garlic Extra Hot">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="chili-extra-hot">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="chili-extra-hot">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chili Garlic Extra Hot</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(15)</span>
+                        </div>
+                        <p class="product-price">₱169.00</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="chili" data-price="179" data-name="Chili Garlic with Calamansi">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="images/chiligarlic.png" alt="Chili Garlic with Calamansi">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="chili-calamansi">Quick View</button>
+                            <button class="add-to-cart-btn" data-product-id="chili-calamansi">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Chili Garlic with Calamansi</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(10)</span>
+                        </div>
+                        <p class="product-price">₱179.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-quick-view">
+                <div class="product-quick-view-image">
+                    <img id="modal-product-image" src="/placeholder.svg" alt="Product Image">
+                </div>
+                <div class="product-quick-view-details">
+                    <h2 id="modal-product-name"></h2>
+                    <div class="product-rating" id="modal-product-rating"></div>
+                    <p class="product-price" id="modal-product-price"></p>
+                    <p class="product-description" id="modal-product-description"></p>
+                    <div class="product-quantity">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn" id="modal-add-to-cart">Add to Cart</button>
+                    <a href="#" class="view-details-btn" id="modal-view-details">View Full Details</a>
+                    <div class="product-meta">
+                        <p><strong>Category:</strong> <span id="modal-product-category"></span></p>
+                        <p><strong>SKU:</strong> <span id="modal-product-sku"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <ul class="social-icons">
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> 0-123-4567-8900</li>
+                    <li><i class="fas fa-map-marker-alt"></i> BLK Try Lot Try South, Caloocan</li>
+                    <li><i class="fas fa-envelope"></i> info@northernchefs.com</li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <img src="images/Logo1.png" alt="Northern Chefs Logo" class="footer-logo">
+                <p>&copy; 2025 Northern Chefs. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers and updates</p>
+                <form class="newsletter-form">
+                    <div class="input-container">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
